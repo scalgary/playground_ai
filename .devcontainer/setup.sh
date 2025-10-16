@@ -15,8 +15,13 @@ if [ ! -f "uv.lock" ]; then
     uv add huggingface-hub
     
     echo "   📊 Adding data science packages..."
-    uv add jupyter ipykernel matplotlib pandas numpy
-    
+    uv add jupyter ipykernel 
+
+    echo "   📊 Adding data science packages..."
+    uv add langchain langchain-huggingface
+    uv pip install torch 
+    uv pip transformers 
+    uv pip sentence-transformers
     echo "   🔧 Adding dev dependencies..."
     uv add --dev pytest ruff mypy
     

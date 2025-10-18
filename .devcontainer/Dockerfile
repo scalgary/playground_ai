@@ -1,13 +1,13 @@
-FROM mcr.microsoft.com/devcontainers/python:3.11
+FROM python:3.12-slim
 
-# Install uv
+RUN apt-get update && \
+apt-get install -y git curl && \
+rm -rf /var/lib/apt/lists/*
+
+RUN useradd -m -s /bin/bash vscode
+USER vscode
+
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
-ENV PATH="/root/.cargo/bin:${PATH}"
+ENV PATH="/home/vscode/.cargo/bin:$PATH"
 
-# Create workspace
 WORKDIR /workspace
-
-# Set uv environment variables
-ENV UV_SYSTEM_PYTHON=1
-ENV PYTHONPATH=/workspace
-

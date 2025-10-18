@@ -1,10 +1,10 @@
 {
-  "name": "AI Chat Simple",
+  "name": "Python + uv",
   "build": {
     "dockerfile": "Dockerfile"
   },
   
-  "postCreateCommand": "bash .devcontainer/setup.sh",
+  //"postCreateCommand": "bash .devcontainer/setup.sh",
   
   "customizations": {
     "vscode": {
@@ -17,7 +17,7 @@
         "ms-toolsai.jupyter"
       ],
       "settings": {
-        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.defaultInterpreterPath": "/workspace/.venv/bin/python",
         "python.terminal.activateEnvironment": false,
         "python.linting.enabled": true,
         "python.linting.pylintEnabled": false,
@@ -33,5 +33,7 @@
       }
     }
     
-  }
+  },
+  "remoteUser": "vscode",
+  "postCreateCommand": "bash .devcontainer/setup.sh"
 }

@@ -3,12 +3,10 @@
   "build": {
     "dockerfile": "Dockerfile",
     "context":".."
-  },
-  "runArgs": ["--env-file", ".devcontainer/.env"],
-  "remoteEnv":{"GITHUB_TOKEN": "${localEnv:GITHUB_TOKEN"},
-  
-  //"postCreateCommand": "bash .devcontainer/setup.sh",
-  
+},
+ "runArgs": ["--env-file",".env"],
+
+
   "customizations": {
     "vscode": {
       "extensions": [
@@ -35,7 +33,6 @@
         "jupyter.interactiveWindow.creationMode": "perFile"
       }
     }
-    
   },
   "remoteUser": "vscode",
   "postCreateCommand": "bash .devcontainer/setup.sh"

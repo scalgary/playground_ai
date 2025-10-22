@@ -6,12 +6,14 @@ requires-python = ">=3.12"
 dependencies = [
     "azure-ai-inference>=1.0.0b9",
     "azure-core>=1.36.0",
+    "caldav>=2.0.1",
     "huggingface-hub>=0.35.3",
     "ipykernel>=7.0.1",
     "jupyter>=1.1.1",
     "matplotlib>=3.10.7",
     "numpy>=2.3.4",
     "pandas>=2.3.3",
+    "uuid>=1.30",
 ]
 
 [dependency-groups]

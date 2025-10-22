@@ -18,6 +18,7 @@
         "ms-toolsai.jupyter"
       ],
       "settings": {
+        "workbench.colorTheme": "Dark Modern",
         "python.defaultInterpreterPath": "/workspace/.venv/bin/python",
         "python.terminal.activateEnvironment": false,
         "python.linting.enabled": true,
@@ -37,3 +38,11 @@
   "remoteUser": "vscode",
   "postCreateCommand": "bash .devcontainer/setup.sh"
 }
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "workbench.colorTheme": "Dark Modern"
+      }
+    }
+  }
